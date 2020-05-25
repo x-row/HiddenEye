@@ -6,4 +6,4 @@
 #
 
 
-#Contains all HiddenEye.py strings
+# Contains all HiddenEye.py strings
