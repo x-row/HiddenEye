@@ -4,6 +4,4 @@
 #    This is free software, and you are welcome to redistribute it
 #    under certain conditions; you can read LICENSE for details.
 #
-
-
 # Contains all HiddenEye.py strings

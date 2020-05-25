@@ -4,8 +4,6 @@
 #    This is free software, and you are welcome to redistribute it
 #    under certain conditions; you can read LICENSE for details.
 #
-
-
 import Defs.ActionManager.main_runner as main_runner
 import Defs.ActionManager.Server.server_runner as server_runner
 import Defs.LocalizationManager.lang_action_manager.lang_server.lang_server_menu as localization
