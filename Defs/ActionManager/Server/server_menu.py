@@ -29,7 +29,8 @@ def server_selection(port):  # Question where user must select server
     print(global_localization.by_darksec)
     print(localization.lang_server_selection["server_selection"])
     print(localization.lang_server_selection["select_any_available_server"])
-    main_runner.print_sorted_as_menu(localization.lang_server_selection["servers_list"])
+    main_runner.print_sorted_as_menu(
+        localization.lang_server_selection["servers_list"])
     choice = input(global_localization.input_line)
     choice = choice.zfill(2)
     if choice == "00":

