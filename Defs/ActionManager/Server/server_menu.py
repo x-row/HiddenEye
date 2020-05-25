@@ -6,12 +6,12 @@
 #
 
 
-from Defs.ImportManager.unsorted_will_be_replaced import run_command
-import Defs.ThemeManager.theme as theme
+import Defs.ActionManager.main_runner as main_runner
 import Defs.ActionManager.Server.server_runner as server_runner
 import Defs.LocalizationManager.lang_action_manager.lang_server.lang_server_menu as localization
 import Defs.LocalizationManager.lang_global_usage as global_localization
-import Defs.ActionManager.main_runner as main_runner
+import Defs.ThemeManager.theme as theme
+from Defs.ImportManager.unsorted_will_be_replaced import run_command
 
 default_palette = theme.default_palette
 

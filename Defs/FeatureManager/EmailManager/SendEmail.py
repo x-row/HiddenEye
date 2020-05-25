@@ -5,15 +5,16 @@
 #    under certain conditions; you can read LICENSE for details.
 #
 
-import os
 import base64
+import os
 import smtplib
-import emailconfig
-from os import system
-from email.mime.text import MIMEText
 from email import encoders
 from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from os import system
+
+import emailconfig
 
 COMMASPACE = ", "
 
